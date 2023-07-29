@@ -21,5 +21,4 @@ public class Team {
     @Column(nullable = false)
     String name;
 
-
 }

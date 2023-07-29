@@ -1,7 +1,10 @@
 package yan.ajiki.srv.tournament.bracket.generator.domain.bracket.resource;
 
 import jakarta.websocket.server.PathParam;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.MatchRecord;
+import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.ClassificationRankingRecord;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.TournamentRecord;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.service.TournamentService;
 
@@ -36,5 +39,12 @@ public class TournamentResource {
     @DeleteMapping("/{id}")
     public void delete(final @PathParam("id") Long id) {
         this.service.delete(id);
+    }
+
+    @PostMapping("/classification-phase")
+    public ResponseEntity<List<ClassificationRankingRecord>> classificationPhase(@RequestBody List<MatchRecord> matches) {
+        var classificationRankingRecords = this.service.calculateClassificationRank(matches);
+
+        return ResponseEntity.ok(classificationRankingRecords);
     }
 }

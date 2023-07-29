@@ -2,8 +2,8 @@ package yan.ajiki.srv.tournament.bracket.generator.domain.bracket.service;
 
 import org.springframework.stereotype.Service;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.ClassificationRankingRecord;
-import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.TeamClassificationResultDTO;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.MatchRecord;
+import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.TeamClassificationResultDTO;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.dto.TournamentRecord;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.exception.NotFoundException;
 import yan.ajiki.srv.tournament.bracket.generator.domain.bracket.mapper.TournamentMapper;
