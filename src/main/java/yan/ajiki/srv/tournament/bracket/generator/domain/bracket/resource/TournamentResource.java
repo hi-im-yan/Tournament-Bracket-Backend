@@ -41,6 +41,7 @@ public class TournamentResource {
         this.service.delete(id);
     }
 
+    @CrossOrigin("http://localhost:3000")
     @PostMapping("/classification-phase")
     public ResponseEntity<List<ClassificationRankingRecord>> classificationPhase(@RequestBody List<MatchRecord> matches) {
         var classificationRankingRecords = this.service.calculateClassificationRank(matches);
