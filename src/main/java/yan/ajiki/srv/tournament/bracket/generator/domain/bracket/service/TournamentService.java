@@ -99,6 +99,7 @@ public class TournamentService {
                     teamName,
                     teamResult.getVictoryCounter(),
                     teamResult.getDefeatCounter(),
+                    teamResult.getDrawCounter(),
                     teamResult.getPointsMade(),
                     teamResult.getPointsSuffered(),
                     pointsBalance
